@@ -24,6 +24,7 @@ jobs:
       run: |
         pwd
         echo "hello world"
+        ls
 
     - name: Checkout codes
       uses: actions/checkout@v2
@@ -31,3 +32,4 @@ jobs:
       run: |
         pwd
         echo "hello world22"
+        ls
