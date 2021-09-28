@@ -25,3 +25,9 @@ jobs:
         pwd
         echo "hello world"
 
+    - name: Checkout codes
+      uses: actions/checkout@v2
+    - name: Test workflow_dispatch 测试2
+      run: |
+        pwd
+        echo "hello world22"
