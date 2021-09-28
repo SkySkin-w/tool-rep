@@ -1,0 +1,27 @@
+name:  github/gitee synchronization tool
+
+# 触发条件：在 push 到 myblog 分支后触发
+#on:
+#  issues:
+#    types: [opened, reopened]
+# 手动触发
+#on:
+#  workflow_dispatch:
+on:
+  watch:
+    types: started
+#env:
+#  TZ: Asia/Shanghai
+
+jobs:
+  time-judge:
+    name: judge gitee and github version
+    if: github.event.repository.owner.id == github.event.sender.id
+    runs-on: ubuntu-latest # 使用最新的 Ubuntu 系统作为编译部署的环境
+
+    steps:
+    - name: Test workflow_dispatch 测试
+      run: |
+        pwd
+        echo "hello world"
+
